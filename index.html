@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Allebooks पर किताबें, अध्ययन सामग्री और प्रतियोगी परीक्षाओं के लिए उपयोगी संसाधन खोजें।">
+<title>Allebooks — Read • Learn • Grow</title>
+<style>
+:root{--navy:#153a67;--blue:#2463a6;--sky:#eaf3ff;--ink:#172033;--muted:#667085;--paper:#f7f9fc;--line:#e4e9f1;--green:#13795b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px 0}.brand{display:flex;align-items:center;gap:10px;font-size:1.35rem;font-weight:850;color:var(--navy)}.logo{width:42px;height:42px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:1.25rem}
+nav{display:flex;gap:20px;color:#44516a;font-size:.95rem}nav a:hover{color:var(--blue)}.menu{display:none}
+.hero{background:linear-gradient(125deg,#edf5ff,#fff 62%,#f0f8ff);padding:64px 0 56px}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:30px}.eyebrow{display:inline-block;padding:5px 11px;background:#dcecff;color:var(--navy);border-radius:999px;font-size:.85rem;font-weight:700}.hero h1{font-size:clamp(2.15rem,5vw,3.8rem);line-height:1.12;letter-spacing:-.04em;margin:16px 0}.hero h1 span{color:var(--blue)}.hero p{max-width:610px;color:#526078;font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:11px;padding:12px 18px;font-weight:750;cursor:pointer;font-size:.98rem}.primary{background:var(--navy);color:white}.secondary{background:#fff;color:var(--navy);border:1px solid #cbd8e8}.hero-art{background:#fff;border:1px solid #dfe9f6;border-radius:26px;padding:24px;box-shadow:0 18px 45px #1b477412;transform:rotate(1deg)}.book-stack{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini-book{min-height:130px;border-radius:16px;padding:16px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;font-weight:750}.mini-book:nth-child(1){background:#245a94}.mini-book:nth-child(2){background:#e7a64b;color:#39250a}.mini-book:nth-child(3){background:#2d826d}.mini-book:nth-child(4){background:#7054a5}.mini-book b{font-size:2rem}
+section{padding:54px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}.section-head h2{font-size:clamp(1.5rem,3vw,2.15rem);margin:0}.section-head p{color:var(--muted);margin:4px 0 0}.searchbar{display:flex;gap:10px;margin:20px 0 18px}.searchbar input{width:100%;padding:13px 15px;border:1px solid #d8e0ec;border-radius:12px;font:inherit;outline-color:var(--blue)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{padding:8px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;color:#4a5870}.filter.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:18px;padding:19px;background:#fff;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #122b4c0c}.cover{height:120px;border-radius:13px;background:var(--sky);display:grid;place-items:center;font-size:2.7rem;margin-bottom:15px}.tag{font-size:.78rem;color:var(--blue);font-weight:800}.card h3{margin:6px 0;font-size:1.1rem}.card p{color:var(--muted);font-size:.93rem;margin:0 0 15px}.card .btn{width:100%;padding:10px}.note{background:#fff8e9;border:1px solid #f2dfb8;color:#72521c;padding:13px 15px;border-radius:12px;font-size:.9rem;margin-top:18px}
+.categories{background:var(--paper)}.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category{border:1px solid var(--line);background:#fff;border-radius:16px;padding:19px}.category .emoji{font-size:1.8rem}.category h3{margin:8px 0 2px;font-size:1.02rem}.category p{margin:0;color:var(--muted);font-size:.9rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:20px;border-radius:16px;background:#f8fafc;border:1px solid var(--line)}.num{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--navy);color:#fff;font-weight:800}
+.contact{background:var(--navy);color:#fff;border-radius:24px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact p{color:#d7e5f7;margin-bottom:0}.contact .secondary{white-space:nowrap}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.footer-row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.empty{display:none;padding:25px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:520px}.cards{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}nav{gap:12px}}
+@media(max-width:520px){.nav{flex-wrap:wrap}.brand{font-size:1.15rem}.logo{width:38px;height:38px}nav{width:100%;justify-content:space-between;font-size:.86rem}.hero{padding:42px 0}.hero-art{padding:14px}.mini-book{min-height:105px;padding:12px}.cards{grid-template-columns:1fr}.section-head{display:block}.searchbar{margin-top:16px}.contact{padding:24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="logo">📚</span> Allebooks</a>
+  <nav aria-label="मुख्य नेविगेशन"><a href="#library">लाइब्रेरी</a><a href="#categories">कैटेगरी</a><a href="#about">हमारे बारे में</a><a href="#contact">संपर्क</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div><span class="eyebrow">आपकी डिजिटल स्टडी लाइब्रेरी</span>
+    <h1>पढ़ें, सीखें और <span>आगे बढ़ें।</span></h1>
+    <p>Allebooks पर किताबें, प्रतियोगी परीक्षाओं के नोट्स और सीखने के उपयोगी संसाधन एक ही जगह खोजें। अपनी पढ़ाई को आसान बनाइए—एक कदम रोज़।</p>
+    <div class="actions"><a class="btn primary" href="#library">सामग्री देखें ↓</a><a class="btn secondary" href="#categories">कैटेगरी ब्राउज़ करें</a></div>
+  </div>
+  <div class="hero-art"><div class="book-stack">
+    <div class="mini-book"><span>ई-बुक्स</span><b>📘</b></div><div class="mini-book"><span>परीक्षा तैयारी</span><b>🎯</b></div>
+    <div class="mini-book"><span>स्टडी नोट्स</span><b>📝</b></div><div class="mini-book"><span>नई स्किल्स</span><b>💡</b></div>
+  </div></div>
+</div></section>
+
+<section id="library"><div class="wrap">
+  <div class="section-head"><div><h2>लोकप्रिय अध्ययन सामग्री</h2><p>नीचे दिए गए डेमो संसाधनों को खोजें या कैटेगरी चुनें।</p></div></div>
+  <div class="searchbar"><input id="search" type="search" placeholder="किताब या विषय खोजें… (जैसे Excel, GK)" aria-label="सामग्री खोजें"></div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="all">सभी</button><button class="filter" data-filter="exam">प्रतियोगी परीक्षा</button><button class="filter" data-filter="skills">कंप्यूटर स्किल्स</button><button class="filter" data-filter="general">सामान्य ज्ञान</button>
+  </div>
+  <div class="cards" id="cards">
+    <article class="card" data-category="exam" data-search="upsssc सामान्य हिंदी व्याकरण प्रतियोगी परीक्षा"><div class="cover">📙</div><span class="tag">प्रतियोगी परीक्षा</span><h3>सामान्य हिंदी — अध्ययन गाइड</h3><p>व्याकरण और अभ्यास के लिए शुरुआती अध्ययन सामग्री।</p><a class="btn secondary resource-link" href="#contact">सामग्री जल्द उपलब्ध</a></article>
+    <article class="card" data-category="general" data-search="सामान्य ज्ञान gk भारत इतिहास भूगोल"><div class="cover">🌏</div><span class="tag">सामान्य ज्ञान</span><h3>सामान्य ज्ञान की शुरुआत</h3><p>इतिहास, भूगोल और नागरिक शास्त्र के विषयों की सूची।</p><a class="btn secondary resource-link" href="#contact">सामग्री जल्द उपलब्ध</a></article>
+    <article class="card" data-category="skills" data-search="excel कंप्यूटर ms office spreadsheet"><div class="cover">📊</div><span class="tag">कंप्यूटर स्किल्स</span><h3>Excel सीखें — बेसिक</h3><p>स्प्रेडशीट, फॉर्मूला और डेटा व्यवस्थित करने की शुरुआत।</p><a class="btn secondary resource-link" href="#contact">सामग्री जल्द उपलब्ध</a></article>
+    <article class="card" data-category="exam" data-search="रीजनिंग reasoning तार्किक क्षमता अभ्यास"><div class="cover">🧩</div><span class="tag">प्रतियोगी परीक्षा</span><h3>रीजनिंग अभ्यास सेट</h3><p>तार्किक क्षमता के प्रश्नों से अभ्यास की शुरुआत करें।</p><a class="btn secondary resource-link" href="#contact">सामग्री जल्द उपलब्ध</a></article>
+    <article class="card" data-category="skills" data-search="टाइपिंग typing हिंदी अंग्रेजी कंप्यूटर"><div class="cover">⌨️</div><span class="tag">कंप्यूटर स्किल्स</span><h3>हिंदी और अंग्रेज़ी टाइपिंग</h3><p>टाइपिंग अभ्यास के लिए शुरुआती मार्गदर्शन।</p><a class="btn secondary resource-link" href="#contact">सामग्री जल्द उपलब्ध</a></article>
+    <article class="card" data-category="general" data-search="पढ़ाई की योजना study planner विद्यार्थी"><div class="cover">🗓️</div><span class="tag">स्टडी प्लान</span><h3>अपना स्टडी प्लान बनाएं</h3><p>समय बाँटने और नियमित पढ़ाई की आदत बनाने के सुझाव।</p><a class="btn secondary resource-link" href="#contact">सामग्री जल्द उपलब्ध</a></article>
+  </div>
+  <div class="empty" id="empty">कोई सामग्री नहीं मिली। दूसरा शब्द या कैटेगरी चुनें।</div>
+  <div class="note">ध्यान दें: यह शुरुआती डेमो वेबसाइट है। अभी सामग्री के बटन लाइव PDF डाउनलोड नहीं करते। केवल अपनी या ऐसी सामग्री जोड़ें जिसे साझा/बेचने की अनुमति हो।</div>
+</div></section>
+
+<section class="categories" id="categories"><div class="wrap"><div class="section-head"><div><h2>अपनी पसंद की कैटेगरी चुनें</h2><p>वेबसाइट को धीरे-धीरे उपयोगी डिजिटल लाइब्रेरी में बदलें।</p></div></div>
+  <div class="category-grid">
+    <div class="category"><div class="emoji">🎓</div><h3>प्रतियोगी परीक्षाएँ</h3><p>परीक्षा-विशेष नोट्स और अभ्यास।</p></div>
+    <div class="category"><div class="emoji">📖</div><h3>ई-बुक्स</h3><p>मौलिक और अधिकृत डिजिटल किताबें।</p></div>
+    <div class="category"><div class="emoji">💻</div><h3>कंप्यूटर</h3><p>Excel, टाइपिंग और डिजिटल स्किल्स।</p></div>
+    <div class="category"><div class="emoji">📰</div><h3>सामान्य ज्ञान</h3><p>ज्ञानवर्धक लेख और अध्ययन सामग्री।</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap"><div class="section-head"><div><h2>Allebooks के बारे में</h2><p>सीखने वालों के लिए सरल और उपयोगी डिजिटल संसाधन।</p></div></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><h3>सही सामग्री चुनें</h3><p>विद्यार्थियों की जरूरत के अनुसार विषय और संसाधन जोड़ें।</p></div>
+    <div class="step"><div class="num">2</div><h3>गुणवत्ता बनाए रखें</h3><p>सही जानकारी, साफ PDF और स्पष्ट विवरण प्रकाशित करें।</p></div>
+    <div class="step"><div class="num">3</div><h3>कमाई के तरीके जोड़ें</h3><p>अधिकृत ई-बुक बिक्री, विज्ञापन या उपयुक्त एफिलिएट लिंक से शुरुआत करें। कमाई की गारंटी नहीं होती।</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="contact"><div><h2>Allebooks से जुड़ें</h2><p>किसी सामग्री के बारे में पूछना चाहते हैं? हमें ईमेल करें।</p></div><a class="btn secondary" href="mailto:hello.allebooks@example.com?subject=Allebooks%20Enquiry">ईमेल करें</a></div>
+  <p style="color:#667085;font-size:.88rem;margin-top:12px">प्रकाशित करने से पहले hello.allebooks@example.com को अपने वास्तविक ईमेल से बदलें।</p>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© <span id="year"></span> Allebooks. सर्वाधिकार सुरक्षित।</span><span><a href="#about">हमारे बारे में</a> · <a href="#contact">संपर्क</a></span></div></footer>
+<script>
+const search = document.getElementById('search');
+const filters = [...document.querySelectorAll('.filter')];
+const cards = [...document.querySelectorAll('.card')];
+const empty = document.getElementById('empty');
+let active = 'all';
+function updateCards(){
+  const q = search.value.trim().toLocaleLowerCase();
+  let visible = 0;
+  cards.forEach(card=>{
+    const matchesCategory = active === 'all' || card.dataset.category === active;
+    const matchesSearch = (card.dataset.search + ' ' + card.innerText).toLocaleLowerCase().includes(q);
+    const show = matchesCategory && matchesSearch;
+    card.style.display = show ? '' : 'none';
+    if(show) visible++;
+  });
+  empty.style.display = visible ? 'none' : 'block';
+}
+search.addEventListener('input', updateCards);
+filters.forEach(btn=>btn.addEventListener('click',()=>{
+  active=btn.dataset.filter;
+  filters.forEach(b=>b.classList.toggle('active', b===btn));
+  updateCards();
+}));
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
